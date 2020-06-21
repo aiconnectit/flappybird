@@ -52,6 +52,7 @@
     color: #fff;
     display: none;
     /* transform: translateX(-50%); C3里面的属性可以移动字体宽度的一半 */
+    z-index: 4;
 }
 #game .mask{
     position: absolute;
@@ -60,6 +61,7 @@
     background-color: #000;
     opacity: 0.6;
     display: none;
+    z-index: 2;
 }
 #game .end{
     position: absolute;
@@ -68,6 +70,7 @@
     text-align: center;
     transform: translateX(-50%);
     display: none;
+    z-index: 3;
 }
 #game .end .over{
     font-weight: bolder;
@@ -134,4 +137,24 @@
     color: #09f;
     /* cursor: pointer; */
     cursor: pointer;
+}
+
+.pipe{
+    position: absolute;
+    /* left: 300px; left需要通过JS进行动态的设置*/
+    width: 52px;
+    height: 150px;
+    z-index: 1;
+}
+
+.pipe.pipe-up{
+    top: 0px;
+    background-image: url('../images/pipe2.png');
+    background-position-y: bottom; /*让柱子从底部开始向下延申*/
+}
+.pipe.pipe-buttom{
+   
+   bottom: 0px;
+   background-image: url('../images/pipe1.png');
+
 }
